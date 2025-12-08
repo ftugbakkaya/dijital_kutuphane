@@ -1,0 +1,339 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Ana Sayfa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="header">
+    <div class="logo">AKKAYA KÜTÜPHANESİ</div>
+
+</div>
+
+<div class="menu">
+    <a href="anasayfa.html">ANA SAYFA</a>
+    <a href="hakkimizda.html">HAKKIMIZDA</a>
+    <a href="kategoriler.html">DİJİTAL KÜTÜPHANE</a>
+    <a href="galeri.html">GALERİ</a>
+    <a href="iletisim.html">İLETİŞİM</a>
+</div>
+
+
+
+<!-- Slider -->
+<section class="slider">
+    <div class="slides">
+        <div class="slide" style="background-image: url('galeri/galeri2.jpg');">
+            <div class="slide-text">
+                <h2>Bilgiye Açılan Kapı</h2>
+                <p>Akkaya Kütüphanesi olarak tüm ziyaretçilerimizi bilgiyle buluşturuyoruz. Modern altyapımız ve geniş kitap koleksiyonumuz sayesinde, herkes için keyifli bir okuma deneyimi sunuyoruz. Gelin, kütüphanemizi keşfedin ve bilgi dünyasına adım atın.</p>
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('galeri/digilib.jpg');">
+            <div class="slide-text">
+                <h2>Dijital Kütüphane</h2>
+                <p>Dijital kütüphanemiz ile fiziksel olarak gelemeyen kullanıcılarımıza da erişim sağlıyoruz. Binlerce e-kitap, akademik makale ve interaktif içerik ücretsiz olarak üyelerimize sunulmaktadır. Online platformumuz sayesinde bilgiye ulaşmak artık çok kolay.</p>
+            </div>
+        </div>
+        <div class="slide" style="background-image: url(galeri/etkinlik3.jpg);">
+            <div class="slide-text">
+                <h2>Etkinlikler ve Atölyeler</h2>
+                <p>Kütüphanemizde düzenlenen yaratıcı atölyeler ve etkinlikler ile çocuklar ve yetişkinler için ilham verici bir ortam sağlıyoruz. Yazarlık, okuma saatleri ve interaktif programlar sayesinde öğrenmeyi eğlenceli hâle getiriyoruz. Katılım ücretsizdir, herkesi bekliyoruz.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slider Butonları -->
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+</section>
+
+
+<script>
+let index = 0;
+const slides = document.querySelector('.slides');
+const totalSlides = document.querySelectorAll('.slide').length;
+
+document.querySelector('.next').addEventListener('click', () => {
+    index = (index + 1) % totalSlides;
+    slides.style.transform = `translateX(-${index * 100}%)`;
+});
+
+document.querySelector('.prev').addEventListener('click', () => {
+    index = (index - 1 + totalSlides) % totalSlides;
+    slides.style.transform = `translateX(-${index * 100}%)`;
+});
+</script>
+
+<!-- DUYURULAR -->
+<section class="duyuru">
+    <h2>DUYURULAR</h2>
+
+    <div class="duyuru-container">
+        <div class="duyuru-box">
+            <h3>Kış Dönemi Çalışma Saatleri Güncellendi</h3>
+            <p>1 Ocak itibarıyla kütüphanemizin çalışma saatleri güncellenmiştir. 
+                Yeni düzenlemeye göre hafta içi 09.00–22.00, hafta sonu 10.00–20.00 saatleri arasında hizmet vermekteyiz. Okuma salonlarımız tüm gün açık olacaktır.</p>
+        </div>
+
+        <div class="duyuru-box">
+            <h3>Dijital Kütüphane Arşivi Genişletildi</h3>
+            <p>Dijital koleksiyonumuza 2.300’den fazla yeni e-kitap ve 140 akademik dergi eklenmiştir. Üyelerimiz sisteme giriş yaparak tüm içeriklere ücretsiz erişebilir.</p>
+        </div>
+
+        <div class="duyuru-box">
+            <h3>Ocak Ayı Atölye ve Etkinlik Programı Yayında</h3>
+            <p>Çocuklar için yaratıcı okuma saatleri, yetişkinler için araştırma teknikleri eğitimi, yaratıcı yazarlık atölyesi ve söyleşiler dahil olmak üzere Ocak ayı 
+                etkinlik takvimimiz yayınlanmıştır. Katılım ücretsizdir; rezervasyon gereklidir.</p>
+        </div>
+
+        <div class="duyuru-box">
+            <h3>Kitap İade Tarihlerinde Esneklik Sağlanıyor</h3>
+            <p>Yoğun sınav ve proje dönemleri nedeniyle Ocak ayında teslim tarihi yaklaşan kitaplar için kullanıcılarımıza ek süre talep hakkı tanınmıştır. 
+                Online hesabınızdan kolayca süre uzatabilirsiniz.</p>
+        </div>
+
+        <div class="duyuru-box">
+            <h3>Yeni “Gençlik Okuma Alanı” Hizmete Açıldı</h3>
+            <p>Kütüphanemizde genç kullanıcılar için özel olarak hazırlanan yeni okuma alanımız açılmıştır. 
+                Renkli oturma grupları, bireysel çalışma masaları ve şarj istasyonlarıyla daha modern bir ortam sunuyoruz.</p>
+        </div>
+    </div>
+</section>
+<section class="hizmet-ve-doluluk">
+<!-- HİZMETLER -->
+<div class="hizmetler">
+
+    <div class="hizmet-kutu">
+        <img src="galeri/galeri7.jpg" alt="Sessiz Çalışma Alanları">
+        <p>Sessiz Çalışma Alanları</p>
+    </div>
+    <div class="hizmet-kutu">
+        <img src="wifi.png" alt="Ücretsiz Wi-Fi">
+        <p>Ücretsiz Wi-Fi</p>
+    </div>
+    <div class="hizmet-kutu">
+        <img src="dijitalkutup.png" alt="Dijital Kütüphane">
+        <p>Dijital Kütüphane</p>
+    </div>
+    <div class="hizmet-kutu">
+        <img src="galeri/galeri4.jpg" alt="Okuma Salonları">
+        <p>Okuma Salonları</p>
+    </div>
+</div>
+
+    <!-- DOLULUK ORANLARI -->
+    <div class="doluluk">
+        <h2>OKUMA SALONLARINDAKİ DOLULUK ORANI</h2>
+        <div class="salon">
+            <span>1. Salon:</span>
+            <div class="bar">
+                <div class="fill" style="width:10%;"></div>
+            </div>
+        </div>
+        <div class="salon">
+            <span>2. Salon:</span>
+            <div class="bar">
+                <div class="fill" style="width:60%;"></div>
+            </div>
+        </div>
+        <div class="salon">
+            <span>3. Salon:</span>
+            <div class="bar">
+                <div class="fill" style="width:30%;"></div>
+            </div>
+        </div>
+        <div class="salon">
+            <span>4. Salon:</span>
+            <div class="bar">
+                <div class="fill" style="width:15%;"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- DİJİTAL KÜTÜPHANE -->
+
+<section class="tanitim">
+    <h1>Akkaya Dijital Kütüphanesi’ne Hoş Geldiniz</h1>
+  <p>
+Akkaya Dijital Kütüphanesi, okuyuculara geniş ve erişilebilir bir kitap arşivi sunan modern bir platformdur.
+ Kullanıcılar, koleksiyonumuzdaki güncel ve klasik eserleri hızlı ve kolay bir şekilde keşfedebilir, aradıkları bilgilere güvenli ve sistematik olarak ulaşabilirler. Kütüphanemiz, üyelik sistemi, kişisel okuma geçmişi, 
+okuma salonları ve kitap ödünç alma hizmetleri ile öğrenme ve okuma deneyimini desteklemeyi amaçlamaktadır.</p>
+
+<div class="dijital-kutuphane">
+    <div class="baslik">
+        <h2>Çok Sevilenler</h2>
+        <a href="#">Tümünü Göster &rarr;</a>
+    </div>
+    <div class="kitaplar">
+        <div class="kitap-kutu">
+            <img src="kitaplar/sucveceza.jpeg">
+            <h3>Suç ve Ceza</h3>
+            <p>Fyodor Dostoyevski</p>
+            <p>Adet: 10</p>
+        </div>
+        <div class="kitap-kutu">
+            <img src="kitaplar/hayvanciftligi.jpeg">
+            <h3>Hayvan Çiftliği</h3>
+            <p>George Orwell</p>
+            <p>Adet: 8</p>
+        </div>
+        <div class="kitap-kutu">
+            <img src="kitaplar/kucukprens.jpg" alt="Sabır Taşını Arayan Çocuk">
+            <h3>Küçük Prens</h3>
+            <p>Antoine de Saint-Exupéry</p>
+            <p>Adet: 15</p>
+        </div>
+        <div class="kitap-kutu">
+            <img src="kitaplar/tutunamayanlar.jpg" alt="Sen Hala Annenin Kızısın">
+            <h3>Tutunamayanlar</h3>
+            <p>Oğuz Atay</p>
+            <p>Adet: 10</p>
+        </div>
+        <div class="kitap-kutu">
+            <img src="kitaplar/körlük.jpeg" alt="Her Şey Ters Gittiğinde">
+            <h3>Körlük</h3>
+            <p>Jose Saramago</p>
+            <p>Adet: 9</p>
+        </div>
+        <div class="kitap-kutu">
+            <img src="kitaplar/ince memed.jpeg" alt="Her Şey Ters Gittiğinde">
+            <h3>İnce Memed</h3>
+            <p>Yaşar Kemal</p>
+            <p>Adet: 7</p>
+        </div>
+        <div class="kitap-kutu">
+            <img src="kitaplar/1984.jpg" alt="Her Şey Ters Gittiğinde">
+            <h3>İnce Memed</h3>
+            <p>Yaşar Kemal</p>
+            <p>Adet: 7</p>
+        </div>
+        <div class="kitap-kutu">
+            <img src="kitaplar/bdad.jpg" alt="Her Şey Ters Gittiğinde">
+            <h3>İnce Memed</h3>
+            <p>Yaşar Kemal</p>
+            <p>Adet: 7</p>
+        </div>
+    </div>
+</div>
+
+<div class="dijital-kutuphane">
+    <div class="baslik">
+        <h2>Yeni Eklenenler</h2>
+        <a href="#">Tümünü Göster &rarr;</a>
+    </div>
+    <div class="kitaplar">
+        <div class="kitap-kutu">
+            <img src="kitaplar/yasamak.jpeg">
+            <h3>Yaşamak</h3>
+            <p>Yu Hua</p>
+            <p>Adet: 10</p>
+        </div>
+        <div class="kitap-kutu">
+            <img src="kitaplar/kürkmantolu.jpeg">
+            <h3>Kürk Mantolu Madonna</h3>
+            <p>Sabahattin Ali</p>
+            <p>Adet: 8</p>
+        </div>
+        <div class="kitap-kutu">
+            <img src="kitaplar/beyazdis.jpeg" alt="Sabır Taşını Arayan Çocuk">
+            <h3>Beyaz Diş</h3>
+            <p>Jack London</p>
+            <p>Adet: 15</p>
+        </div>
+        <div class="kitap-kutu">
+            <img src="kitaplar/geceyarisi.jpg" alt="Sen Hala Annenin Kızısın">
+            <h3>Gece Yarısı Kütüphanesi</h3>
+            <p> Matt Haig</p>
+            <p>Adet: 10</p>
+        </div>
+        <div class="kitap-kutu">
+            <img src="kitaplar/simyacı.jpeg" alt="Her Şey Ters Gittiğinde">
+            <h3>Simyacı</h3>
+            <p>Paulo Coelho</p>
+            <p>Adet: 9</p>
+        </div>
+        <div class="kitap-kutu">
+            <img src="kitaplar/farelerveinsanlar.jpg" alt="Her Şey Ters Gittiğinde">
+            <h3>Fareler ve İnsanlar</h3>
+            <p>John Steinbeck</p>
+            <p>Adet: 7</p>
+        </div>
+        <div class="kitap-kutu">
+            <img src="kitaplar/yeraltindannotlar.jpg" alt="Her Şey Ters Gittiğinde">
+            <h3>Yer Altından Notlar</h3>
+            <p>Fyodor Dostoyevski</p>
+            <p>Adet: 7</p>
+        </div>
+        <div class="kitap-kutu">
+            <img src="kitaplar/masumiyetmüzesi.jpg" alt="Her Şey Ters Gittiğinde">
+            <h3>Maumiyet Müzesi</h3>
+            <p>Orhan Pamuk
+            </p>
+            <p>Adet: 7</p>
+        </div>
+    </div>
+</div>
+
+
+<!-- GALERİ ÖN İZLEME -->
+<section class="galeri-onizleme">
+    <h2>KÜTÜPHANEMİZDEN KARELER</h2>
+
+    <div class="galeri-mini">
+        <img src="galeri/galeri12.jpg">
+        <img src="galeri/galeri2.jpg">
+        <img src="galeri/galeri5.jpg">
+        <img src="galeri/galeri8.jpg">
+    </div>
+
+    <a class="galeri-btn" href="galeri.html">Tüm Galeriye Git</a>
+</section>
+
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-section">
+      <h3>Hakkımızda</h3>
+      <p>Akkaya Kütüphanesi, kitaplarla buluşmanızı sağlayan dijital ve fiziksel bir okuma alanıdır. Her yaştan okuyucuya hizmet vermektedir.</p>
+    </div>
+
+
+    <div class="footer-section">
+      <h3>Hızlı Linkler</h3>
+      <ul>
+        <li><a href="#">Ana Sayfa</a></li>
+        <li><a href="#">Hizmetlerimiz</a></li>
+        <li><a href="#">Duyurular</a></li>
+        <li><a href="#">Üye Girişi</a></li>
+        <li><a href="#">İletişim</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>İletişim</h3>
+      <p>Adres: Ankara, Türkiye</p>
+      <p>Telefon: +90 123 456 78 90</p>
+      <p>Email: info@akkayakutuphanesi.com</p>
+      <div class="socials">
+        <a href="hakkimizda.html">🌐</a>
+        <a href="kategoriler.html">📘</a>
+        <a href="galeri.html">📸</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    &copy; 2025 Akkaya Kütüphanesi. Tüm hakları saklıdır.
+  </div>
+</footer>
+</body>
+</html>
+
+</body>
+</html>

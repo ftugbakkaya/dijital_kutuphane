@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #eef2f5;
+}
+
+/* Ortadaki tüm düzen */
+.page {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding: 40px;
+    min-height: 80vh;
+}
+
+/* Sol ve sağ resim alanları */
+.side-images {
+    width: 28%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Fotoğraflar */
+.side-images img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0px 6px 15px rgba(0,0,0,0.2);
+}
+
+/* Ortadaki iletişim alanı */
+.contact-container {
+    width: 44%;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Tablo */
+.contact-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.contact-table th {
+    background: #27472c;
+    color: white;
+    padding: 14px;
+    font-size: 20px;
+}
+
+.contact-table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Input & Textarea */
+.contact-table input,
+.contact-table textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #bbb;
+    outline: none;
+}
+
+.contact-table input:focus,
+.contact-table textarea:focus {
+    border-color:#27472c;
+}
+
+/* Button */
+.btn-row {
+    text-align: center;
+    padding-top: 10px;
+}
+
+button {
+    background:#27472c;
+    color: white;
+    padding: 10px 22px;
+    font-size: 15px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #27472c;
+    transform: scale(1.05);
+}
+
+/* Alt bilgi tablosu */
+.info {
+    margin-top: 40px;
+}
+
+.info h3 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.info table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.info td {
+    padding: 8px;
+    border: 1px solid #ccc;
+    background: #fafafa;
+}
+h1{
+    text-align: center;
+    color: #27472c;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #27472c;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+table{
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fdfdfd;
+}
+
+input, textarea{
+    width: 95%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #bbb;
+    transition: 0.3s;
+}
+
+input:focus, textarea:focus{
+    border-color: #27472c;
+    box-shadow: 0 0 5px rgba(43,108,176,0.5);
+    outline: none;
+}
+
+button{
+    padding: 10px 25px;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: bold;
+}
